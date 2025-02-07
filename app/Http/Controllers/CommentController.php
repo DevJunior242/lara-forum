@@ -167,3 +167,5 @@ class CommentController extends Controller
       return view('comment._comment', compact('comment', 'post'));
    }
 }
+
+
