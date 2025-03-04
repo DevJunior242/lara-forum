@@ -43,7 +43,7 @@ class PostController extends Controller
     public function postStore(Request $request)
     {
 
-        //'file' => 'required|mimes:jpeg,jpg,svg,png,gif,mp4,mov,avi,wmv,flv,webm|max:51200', // 50 Mo
+        
 
         $data = $request->validate([
             'title' => 'required|string|max:255',
@@ -59,7 +59,7 @@ class PostController extends Controller
 
 
         $file = $request->file('file');
-        //vi
+        
         if ($file) {
             $path = $file->store('Upload', 'public');
             $posts->file = $file->getClientOriginalExtension();
@@ -131,7 +131,7 @@ class PostController extends Controller
             return redirect()->back()->with('error', 'le post n existe pas');
         }
         $file = $request->file('file');
-        //vi
+        
         if ($file) {
             $path = $file->store('Upload', 'public');
             $post->file = $file->getClientOriginalExtension();
