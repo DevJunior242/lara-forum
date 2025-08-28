@@ -180,22 +180,8 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function(){
-        document.querySelectorAll('.edit-reply-form').forEach(button =>{
-            button.addEventListener('click', function(){
-                let editId = this.getAttribute('data-editReply-id');
-                let editForm =  document.getElementById(`edit-reply-form-${editId}`);
-                if (editForm.classList.contains('hidden')) {
-                    // Masquer tous les autres formulaires de réponse
-                    document.querySelectorAll('.edit-reply-form').forEach(form => form.classList.add('hidden'));
-                    editForm.classList.remove('hidden');
-                } else {
-                    editForm.classList.add('hidden');
-                }
-            } )
-        })
-    });
-    
+   
+    .......................
     document.addEventListener('DOMContentLoaded', function(){
         document.querySelectorAll('.edit-button').forEach(button =>{
             button.addEventListener('click', function(){
